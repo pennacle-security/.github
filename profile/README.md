@@ -9,14 +9,6 @@
 
 Independent offensive security team. We break web applications with written permission, hunt bugs on public bounty programs, and ship the tooling we use in the field.
 
-## What we do
-
-| | |
-|---|---|
-| **Bug bounty** | HackerOne, Bugcrowd and private programs. Web apps, APIs, mobile backends. |
-| **Manual pentesting** | No scanner-only reports. Every finding is hand-verified, with reproduction steps. |
-| **Tooling** | We build and open-source the tools we wished we had when we were starting out. |
-
 ## Projects
 
 | Repo | What it is | Status |
@@ -34,7 +26,3 @@ Independent offensive security team. We break web applications with written perm
 GitHub issues on our repos for now - a proper contact page is coming.
 
 > Found a security issue in something we ship? Report it privately and we will fix it and credit you. See the [security policy](https://github.com/pennacle-security/.github/blob/main/SECURITY.md).
-
----
-
-Only test systems you are authorized to test. Seriously.
