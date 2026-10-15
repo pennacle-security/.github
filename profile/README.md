@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./github/assets/banner.png" alt="Pennacle Security" width="720">
+  <img src="https://github.com/pennacle-security/.github/blob/main/assets/banner.png" alt="Pennacle Security" width="720">
 </p>
 
 <p align="center">
