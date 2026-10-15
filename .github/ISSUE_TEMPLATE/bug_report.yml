@@ -1,0 +1,48 @@
+name: Bug report
+description: Something in summit is broken, or a finding is wrong
+labels: [triage]
+body:
+  - type: dropdown
+    id: component
+    attributes:
+      label: What is broken?
+      options:
+        - scanner (scan)
+        - fuzzer (fuzz)
+        - proxy
+        - repeater
+        - reports
+        - install/build
+        - docs
+    validations:
+      required: true
+  - type: dropdown
+    id: quality
+    attributes:
+      label: Detection quality
+      description: If this is about a scan result, which way is it wrong?
+      options:
+        - false positive (finding did not reproduce)
+        - false negative (a known issue was missed)
+        - wrong severity or confidence
+        - not detection related
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command you ran
+      placeholder: summit scan https://... --json report.json
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What happened vs what you expected
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Target context
+      description: Stack/framework of the target. No private details.

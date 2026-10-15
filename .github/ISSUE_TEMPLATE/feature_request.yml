@@ -1,0 +1,26 @@
+name: Feature request
+description: New check, new command, or an improvement
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What can you not do today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: I searched existing issues for this
+          required: true
+        - label: This fits summit's goal (small, scriptable, honest findings)
+          required: false
