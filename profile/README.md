@@ -13,7 +13,7 @@ Independent offensive security team. We break web applications with written perm
 
 | Repo | What it is | Status |
 |---|---|---|
-| [summit](https://github.com/pennacle-security/summit) | Web security testing platform: proxy, scanner and fuzzer in one CLI. Findings carry confidence labels, so you know what is fact and what is a hunch. | active - [v0.1.0](https://github.com/pennacle-security/summit/releases/tag/v0.1.0) |
+| [summit](https://github.com/pennacle-security/summit) | Web security testing platform: proxy, scanner and fuzzer in one CLI. Findings carry confidence labels, so you know what is fact and what is a hunch. | active - [v0.5.0](https://github.com/pennacle-security/summit/releases/tag/v0.5.0) |
 
 ## How we work
 
