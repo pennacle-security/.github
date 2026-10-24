@@ -9,12 +9,6 @@
 
 Independent offensive security team. We break web applications with written permission, hunt bugs on public bounty programs, and ship the tooling we use in the field.
 
-## Projects
-
-| Repo | What it is | Status |
-|---|---|---|
-| [summit](https://github.com/pennacle-security/summit) | Web security testing platform: proxy, scanner and fuzzer in one CLI. Findings carry confidence labels, so you know what is fact and what is a hunch. | active - [v0.5.0](https://github.com/pennacle-security/summit/releases/tag/v0.5.0) |
-
 ## How we work
 
 - **Permission first.** We do not touch systems we are not authorized to test, and neither should you.
