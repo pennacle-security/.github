@@ -29,7 +29,8 @@ repos="$(gh api --paginate "orgs/${ORG}/repos?per_page=100&type=public")"
 
 # name, url, description, homepage, language, stars, forks, issues, last push.
 # .github is meta plumbing, not a project - skip it. Archived repos would just
-# rot in the table, so they are skipped too.
+# rot in the table, so they are skipped too. Pipes in descriptions are swapped
+# for slashes - a raw pipe would break the markdown table cell.
 data="$(printf '%s' "$repos" | jq -rs '
   [.[][]]
   | map(select(.archived != true and .disabled != true and .name != ".github"))
@@ -37,7 +38,7 @@ data="$(printf '%s' "$repos" | jq -rs '
   | [
       .name,
       .html_url,
-      ((.description // "") | gsub("[\\t\\n\\r]"; " ") | gsub("\\\\|"; "/")),
+      ((.description // "") | gsub("[\\t\\n\\r]"; " ") | gsub("[|]"; "/")),
       ((.homepage // "") | sub("/$"; "")),
       (.language // ""),
       (.stargazers_count | tostring),
