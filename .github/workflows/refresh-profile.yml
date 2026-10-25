@@ -1,0 +1,48 @@
+name: Refresh org profile
+
+# Rewrites the auto-generated project table in profile/README.md from live
+# org data. Commits only when the table actually changed, so quiet weeks
+# produce a quiet commit log.
+
+on:
+  schedule:
+    - cron: "*/30 * * * *" # UTC; the commit step is a no-op when nothing changed
+  workflow_dispatch:
+  repository_dispatch:
+    types: [refresh-profile]
+  push:
+    branches: [main]
+    paths:
+      - "scripts/refresh_profile.sh"
+      - ".github/workflows/refresh-profile.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-org-profile
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Regenerate portfolio block
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash scripts/refresh_profile.sh
+
+      - name: Commit if the table changed
+        run: |
+          if [[ -n "$(git status --porcelain profile/README.md)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add profile/README.md
+            git commit -m "chore(profile): refresh project table from live org data"
+            git push
+          else
+            echo "Table unchanged - nothing to commit"
+          fi

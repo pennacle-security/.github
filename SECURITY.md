@@ -25,6 +25,6 @@ What to expect:
 
 ## Scope
 
-The summit tool is the main asset. Deliberately vulnerable demo code (the `examples/` directory) is insecure on purpose - issues in demo code only count if they break out of the demo.
+Public projects today: summit (web security testing platform) and cairnlock (AI-agent context file analyzer). Deliberately vulnerable demo code (the `examples/` directory in summit) is insecure on purpose - issues in demo code only count if they break out of the demo.
 
 We only test systems we have written permission to test, and we expect the same from everyone contributing here.

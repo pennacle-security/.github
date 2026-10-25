@@ -2,33 +2,58 @@
   <img src="assets/banner.png" alt="Pennacle Security" width="720">
 </p>
 
-<p align="center">
-  <a href="https://github.com/pennacle-security/summit/actions/workflows/tests.yml"><img src="https://github.com/pennacle-security/summit/actions/workflows/tests.yml/badge.svg" alt="summit CI"></a>
-  <a href="https://github.com/pennacle-security/summit/releases"><img src="https://img.shields.io/github/v/tag/pennacle-security/summit?label=summit&color=2ea44f" alt="summit release"></a>
-</p>
+# pennacle-security/.github
 
-Independent offensive security team. We break web applications with written permission, hunt bugs on public bounty programs, and ship the tooling we use in the field.
+The plumbing repo for the [pennacle-security](https://github.com/pennacle-security) org. No product code lives here, on purpose. What lives here instead:
 
-## What we do
+- the [org profile page](profile/README.md) that renders on github.com/pennacle-security
+- org-wide community health files (they apply to every public repo in the org unless a repo ships its own)
+- a scheduled workflow that keeps the project table on that profile in sync with reality
 
-| | |
-|---|---|
-| **Bug bounty** | HackerOne, Bugcrowd and private programs. Web apps, APIs, mobile backends. |
-| **Manual pentesting** | No scanner-only reports. Every finding is hand-verified, with reproduction steps. |
-| **Tooling** | We build and open-source the tools we wished we had when we were starting out. |
+[![Refresh org profile](https://github.com/pennacle-security/.github/actions/workflows/refresh-profile.yml/badge.svg)](https://github.com/pennacle-security/.github/actions/workflows/refresh-profile.yml)
 
-## How we work
+## File map
 
-- **Permission first.** We do not touch systems we are not authorized to test, and neither should you.
-- **Verification over volume.** A finding we cannot reproduce does not leave the building.
-- **False positives are bugs.** Our scanner reports carry confidence labels for a reason - "it fired wrong" gets a regression test, not a shrug.
+| Path | What it is | Applies to |
+|---|---|---|
+| [`profile/README.md`](profile/README.md) | The org profile: banner, live project table, how we work, contact | the org profile page |
+| [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) | Short version: be decent | every repo |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Ground rules plus per-project appendices (summit, cairnlock) | every repo |
+| [`SECURITY.md`](SECURITY.md) | Supported versions, private disclosure process, scope | every repo |
+| [`PULL_REQUEST_TEMPLATE.md`](PULL_REQUEST_TEMPLATE.md) | What / Why / How tested | every repo |
+| [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE) | Bug report and feature request forms | every repo |
+| [`scripts/refresh_profile.sh`](scripts/refresh_profile.sh) | Rebuilds the project table from the GitHub API | this repo |
+| [`.github/workflows/refresh-profile.yml`](.github/workflows/refresh-profile.yml) | Runs the script on a schedule, commits when the table changed | this repo |
 
-## Contact
+## How the live project table works
 
-GitHub issues on our repos for now - a proper contact page is coming.
+The block between these two comments in [`profile/README.md`](profile/README.md) is machine-written:
 
-> Found a security issue in something we ship? Report it privately and we will fix it and credit you. See the [security policy](https://github.com/pennacle-security/.github/blob/main/SECURITY.md).
+```
+<!-- BEGIN:ORG-PORTFOLIO (auto-generated - do not edit) -->
+...
+<!-- END:ORG-PORTFOLIO (auto-generated - do not edit) -->
+```
 
----
+`scripts/refresh_profile.sh` lists the org's public repos through the GitHub API (description, language, stars, forks, open issues, last push), renders them as a markdown table, and swaps it into the block. Everything outside the markers is human-written and the script will not touch it.
 
-Only test systems you are authorized to test. Seriously.
+It runs:
+
+- every 30 minutes on a schedule
+- on pushes to `main` in this repo that touch the script or the workflow
+- on demand: **Actions > Refresh org profile > Run workflow**, or
+
+  ```bash
+  gh api repos/pennacle-security/.github/dispatches -f event_type=refresh-profile
+  ```
+
+The workflow only commits when the rendered table actually differs from what is on disk, so a quiet org means a quiet commit log.
+
+## Adding a repo to the table
+
+You do not edit this repo. Create a public repo in the org, write a description, done - it shows up in the table within half an hour, sorted by most recent push. Archived repos are skipped, and so is this one.
+
+## Notes
+
+- Security problems are never reported through issues. See [SECURITY.md](SECURITY.md).
+- The banner is hand-made. If you edit it, keep the org name legible at 720px.
