@@ -17,12 +17,12 @@ Everything on this page is written by hand except the project table. A workflow 
 
 <!-- BEGIN:ORG-PORTFOLIO (auto-generated - do not edit) -->
 
-**2 public projects · 5 stars · 4 forks · refreshed 2026-10-25 11:12 UTC**
+**2 public projects · 5 stars · 4 forks · refreshed 2026-10-25 11:28 UTC**
 
 | Project | What it is | Language | Stars | Forks | Issues | Last push |
 |---|---|---|---:|---:|---:|---|
-| [**summit**](https://github.com/pennacle-security/summit) · [site](https://pennacle-security.github.io/summit/) | Open-source web security testing platform: proxy, scanner and fuzzer in one CLI. By Pennacle Security. | ![Python](https://img.shields.io/badge/Python-3572A5?logo=python&logoColor=white&style=flat-square) | 4 | 3 | 5 | 2026-10-25 |
-| [**cairnlock**](https://github.com/pennacle-security/cairnlock) · [site](https://pennacle-security.github.io/cairnlock/) | Static analyzer and lockfile for AI-agent context files: AGENTS.md, CLAUDE.md, MCP configs, skill folders. | ![Python](https://img.shields.io/badge/Python-3572A5?logo=python&logoColor=white&style=flat-square) | 1 | 1 | 4 | 2026-10-25 |
+| [**cairnlock**](https://github.com/pennacle-security/cairnlock) · [site](https://pennacle-security.github.io/cairnlock) | /S/t/a/t/i/c/ /a/n/a/l/y/z/e/r/ /a/n/d/ /l/o/c/k/f/i/l/e/ /f/o/r/ /A/I/-/a/g/e/n/t/ /c/o/n/t/e/x/t/ /f/i/l/e/s/:/ /A/G/E/N/T/S/./m/d/,/ /C/L/A/U/D/E/./m/d/,/ /M/C/P/ /c/o/n/f/i/g/s/,/ /s/k/i/l/l/ /f/o/l/d/e/r/s/./ | ![Python](https://img.shields.io/badge/Python-3572A5?logo=python&logoColor=white&style=flat-square) | 1 | 1 | 3 | 2026-10-25 |
+| [**summit**](https://github.com/pennacle-security/summit) · [site](https://pennacle-security.github.io/summit) | /O/p/e/n/-/s/o/u/r/c/e/ /w/e/b/ /s/e/c/u/r/i/t/y/ /t/e/s/t/i/n/g/ /p/l/a/t/f/o/r/m/:/ /p/r/o/x/y/,/ /s/c/a/n/n/e/r/ /a/n/d/ /f/u/z/z/e/r/ /i/n/ /o/n/e/ /C/L/I/./ /B/y/ /P/e/n/n/a/c/l/e/ /S/e/c/u/r/i/t/y/./ | ![Python](https://img.shields.io/badge/Python-3572A5?logo=python&logoColor=white&style=flat-square) | 4 | 3 | 5 | 2026-10-25 |
 
 <!-- END:ORG-PORTFOLIO (auto-generated - do not edit) -->
 
