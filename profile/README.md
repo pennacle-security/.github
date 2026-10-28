@@ -17,11 +17,11 @@ Everything on this page is written by hand except the project table. A workflow 
 
 <!-- BEGIN:ORG-PORTFOLIO (auto-generated - do not edit) -->
 
-**2 public projects · 5 stars · 4 forks · refreshed 2026-10-27 22:52 UTC**
+**2 public projects · 5 stars · 4 forks · refreshed 2026-10-28 02:01 UTC**
 
 | Project | What it is | Language | Stars | Forks | Issues | Last push |
 |---|---|---|---:|---:|---:|---|
-| [**cairnlock**](https://github.com/pennacle-security/cairnlock) · [site](https://pennacle-security.github.io/cairnlock) | Static analyzer and lockfile for AI-agent context files: AGENTS.md, CLAUDE.md, MCP configs, skill folders. | ![Python](https://img.shields.io/badge/Python-3572A5?logo=python&logoColor=white&style=flat-square) | 1 | 1 | 5 | 2026-10-26 |
+| [**cairnlock**](https://github.com/pennacle-security/cairnlock) · [site](https://pennacle-security.github.io/cairnlock) | Static analyzer and lockfile for AI-agent context files: AGENTS.md, CLAUDE.md, MCP configs, skill folders. | ![Python](https://img.shields.io/badge/Python-3572A5?logo=python&logoColor=white&style=flat-square) | 1 | 1 | 1 | 2026-10-28 |
 | [**summit**](https://github.com/pennacle-security/summit) · [site](https://pennacle-security.github.io/summit) | Open-source web security testing platform: proxy, scanner and fuzzer in one CLI. By Pennacle Security. | ![Python](https://img.shields.io/badge/Python-3572A5?logo=python&logoColor=white&style=flat-square) | 4 | 3 | 1 | 2026-10-26 |
 
 <!-- END:ORG-PORTFOLIO (auto-generated - do not edit) -->
